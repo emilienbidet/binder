@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_filters"
+        android:icon="@drawable/cog_wheel"
+        android:title="@string/nav_title_filters" />
+
+    <item
+        android:id="@+id/nav_binder"
+        android:icon="@drawable/beer_white"
+        android:title="@string/nav_title_binder" />
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/heart_filled"
+        android:title="@string/nav_title_favorites" />
+</menu>
