@@ -15,7 +15,7 @@ package="com.example.binderstpatrick">
         </intent-filter>
     </activity>
     <activity
-        android:name="com.example.binderstpatrick.com.emilienbidet.binderstpatrick.BeerDetailsActivity"
+        android:name="com.emilienbidet.binderstpatrick.BeerDetailsActivity"
         android:parentActivityName="com.emilienbidet.binderstpatrick.MainActivity">
         <!-- The meta-data tag is required if you support API level 15 and lower -->
         <meta-data
