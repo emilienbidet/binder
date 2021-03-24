@@ -1,4 +1,4 @@
-package com.example.binderstpatrick;
+package com.emilienbidet.binderstpatrick;
 
 public abstract class SharedPreferencesConfig {
     public static String SHARED_PREFERENCES_OPTIONS_NAME = "filters";

@@ -1,4 +1,4 @@
-package com.example.binderstpatrick;
+package com.emilienbidet.binderstpatrick;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.binderstpatrick.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -31,7 +32,6 @@ import me.yuqirong.cardswipelayout.CardItemTouchHelperCallback;
 import me.yuqirong.cardswipelayout.CardLayoutManager;
 import me.yuqirong.cardswipelayout.OnSwipeListener;
 
-import static com.example.binderstpatrick.SharedPreferencesConfig.*;
 import static android.content.Context.MODE_PRIVATE;
 
 public class BinderFragment extends Fragment {
@@ -73,24 +73,24 @@ public class BinderFragment extends Fragment {
     }
 
     private void saveData() {
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFERENCES_BEERS_NAME, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SharedPreferencesConfig.SHARED_PREFERENCES_BEERS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
-        editor.putString(SHARED_PREFERENCES_KEY_FAVORITE_BEERS, gson.toJson(favoriteBeers));
+        editor.putString(SharedPreferencesConfig.SHARED_PREFERENCES_KEY_FAVORITE_BEERS, gson.toJson(favoriteBeers));
         editor.apply();
     }
 
     private void loadData() {
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFERENCES_OPTIONS_NAME, 0);
-        String json = sharedPreferences.getString(SHARED_PREFERENCES_KEY_FILTERS, null);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SharedPreferencesConfig.SHARED_PREFERENCES_OPTIONS_NAME, 0);
+        String json = sharedPreferences.getString(SharedPreferencesConfig.SHARED_PREFERENCES_KEY_FILTERS, null);
         filters = json != null ? new Gson().fromJson(json, Filters.class) : new Filters();
 
-        sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFERENCES_BEERS_NAME, MODE_PRIVATE);
+        sharedPreferences = getActivity().getSharedPreferences(SharedPreferencesConfig.SHARED_PREFERENCES_BEERS_NAME, MODE_PRIVATE);
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<Beer>>() {}.getType();
         beers = new ArrayList<>();
         getBeers();
-        favoriteBeers = gson.fromJson(sharedPreferences.getString(SHARED_PREFERENCES_KEY_FAVORITE_BEERS, null), type);
+        favoriteBeers = gson.fromJson(sharedPreferences.getString(SharedPreferencesConfig.SHARED_PREFERENCES_KEY_FAVORITE_BEERS, null), type);
         if (favoriteBeers == null) {
             favoriteBeers = new ArrayList<>();
         }

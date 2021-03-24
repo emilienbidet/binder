@@ -1,4 +1,4 @@
-package com.example.binderstpatrick;
+package com.emilienbidet.binderstpatrick;
 
 public class Filters {
 

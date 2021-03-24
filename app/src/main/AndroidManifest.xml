@@ -8,19 +8,19 @@ package="com.example.binderstpatrick">
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
-    <activity android:name=".MainActivity">
+    <activity android:name="com.emilienbidet.binderstpatrick.MainActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
     <activity
-        android:name="com.example.binderstpatrick.BeerDetailsActivity"
-        android:parentActivityName=".MainActivity">
+        android:name="com.example.binderstpatrick.com.emilienbidet.binderstpatrick.BeerDetailsActivity"
+        android:parentActivityName="com.emilienbidet.binderstpatrick.MainActivity">
         <!-- The meta-data tag is required if you support API level 15 and lower -->
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+            android:value="com.emilienbidet.binderstpatrick.MainActivity" />
     </activity>
 </application>
 </manifest>

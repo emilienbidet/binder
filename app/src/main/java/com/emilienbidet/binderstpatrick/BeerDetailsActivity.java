@@ -1,16 +1,14 @@
-package com.example.binderstpatrick;
+package com.emilienbidet.binderstpatrick;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.binderstpatrick.R;
 import com.squareup.picasso.Picasso;
 
 public class BeerDetailsActivity extends AppCompatActivity {
