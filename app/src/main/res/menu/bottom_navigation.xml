@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_filters"
+        android:id="@+id/nav_options"
         android:icon="@drawable/cog_wheel"
-        android:title="@string/nav_title_filters" />
+        android:title="@string/nav_title_options" />
 
     <item
         android:id="@+id/nav_binder"
