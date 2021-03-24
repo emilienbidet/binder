@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/shape_background"
+    android:gravity="center"
+    android:elevation="2dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:radius="7.5dp"
+            android:src="@drawable/beer" />
+
+        <ImageView
+            android:id="@+id/iv_dislike"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:alpha="0"
+            android:src="@drawable/close"
+            android:rotation="25"/>
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:alpha="0"
+            android:src="@drawable/heart_filled"
+            android:rotation="-25"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_binder_text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_binder_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_binder_abv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_binder_name"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_abv"
+            android:gravity="center"
+            android:text="ABV"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_binder_ibu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_binder_name"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/tv_binder_abv"
+            android:background="@drawable/shape_ibu"
+            android:gravity="center"
+            android:text="IBU"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_binder_ebc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_binder_name"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/tv_binder_ibu"
+            android:background="@drawable/shape_ebc"
+            android:gravity="center"
+            android:text="EBC"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_binder_tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_binder_abv"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Tagline"
+            android:textColor="#cbcbcb" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
