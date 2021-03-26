@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new FavoritesFragment();
                         break;
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).addToBackStack(null).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                 return true;
             };
 }

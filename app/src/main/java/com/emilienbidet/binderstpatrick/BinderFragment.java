@@ -120,6 +120,10 @@ public class BinderFragment extends Fragment {
                 .setCallback(new FutureCallback<JsonArray>() {
                     @Override
                     public void onCompleted(Exception e, JsonArray result) {
+                        if (e != null) {
+                            Toast.makeText(getContext(), "No internet connection", Toast.LENGTH_SHORT);
+                            return;
+                        }
                         final GsonBuilder builder = new GsonBuilder();
                         final Gson gson = builder.create();
                         ArrayList<Beer> beerse  = gson.fromJson(result, new TypeToken<List<Beer>>(){}.getType());
@@ -162,7 +166,6 @@ public class BinderFragment extends Fragment {
              *  t : the data of swiped cards from dataList
              *  direction : CardConfig.SWIPED_LEFT means swiped from left；CardConfig.SWIPED_RIGHT means swiped from right
              */
-            Log.d("WSH", "onSwiped: "+ beer.getImageUrl());
             recyclerView.getAdapter().notifyDataSetChanged();
             BinderAdapter.BeersViewHolder holder = (BinderAdapter.BeersViewHolder) viewHolder;
             viewHolder.itemView.setAlpha(1f);
